@@ -1,0 +1,32 @@
+{
+    "name": "blackjew/framework",
+    "description": "This is the framework core",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "efsystems",
+            "email": "eobua6882@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2.5",
+        "opis/closure": "^3.6",
+        "symfony/http-foundation": "^5.1",
+        "monolog/monolog": "^2.0",
+        "ramsey/uuid": "^3.7|^4.0",
+        "voku/portable-ascii": "^1.4.8"
+    },
+    "autoload": {
+        "files": [
+            "src/Core/Foundation/helpers.php",
+            "src/Core/Support/helpers.php"
+        ],
+        "psr-4": {
+            "Core\\": "src/Core/"
+        }
+    },
+    "require-dev": {
+        "filp/whoops": "^2.8"
+    }
+}

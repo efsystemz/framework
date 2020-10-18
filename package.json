@@ -1,0 +1,23 @@
+{
+  "name": "blackjew-framework",
+  "version": "2.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "release": "standard-version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/efsystemz/framework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/efsystemz/framework/issues"
+  },
+  "homepage": "https://github.com/efsystemz/framework#readme",
+  "devDependencies": {
+    "standard-version": "^9.0.0"
+  }
+}
