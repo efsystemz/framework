@@ -49,3 +49,19 @@ if (! function_exists('request')) {
     }
 
 }
+
+if (! function_exists('env')) {
+
+    /**
+     * Render the view 
+     *
+     * @param  mixed  $key
+     * @param  mixed  $default
+     * @return string
+     */
+    function env($key, $default = null)
+    {
+       return $_ENV['$key'];
+    }
+
+}
