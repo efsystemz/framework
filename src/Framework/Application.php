@@ -9,20 +9,20 @@ class Application
     const EVENT_BEFORE_REQUEST = 'beforeRequest';
     const EVENT_AFTER_REQUEST = 'afterRequest';
 
-    protected array $eventListeners = [];
+    protected $eventListeners = [];
 
-    public static Application $app;
-    public static string $ROOT_DIR;
-    public string $userClass;
-    public string $layout = 'main';
-    public Router $router;
-    public Request $request;
-    public Response $response;
-    public ?Controller $controller = null;
-    public Database $db;
-    public Session $session;
-    public View $view;
-    public ?UserModel $user;
+    public static $app;
+    public static $ROOT_DIR;
+    public $userClass;
+    public $layout = 'main';
+    public $router;
+    public $request;
+    public $response;
+    public $controller = null;
+    public $db;
+    public $session;
+    public $view;
+    public $user;
 
     public function __construct($rootDir, $config)
     {

@@ -9,7 +9,7 @@ class Router
     private Request $request;
     private Response $response;
 
-    private array $routeMap = [];
+    private $routeMap = [];
 
     public function __construct(Request $request, Response $response)
     {

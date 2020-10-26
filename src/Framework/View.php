@@ -5,7 +5,7 @@ namespace Efsystems\Framework;
 class View
 {
     
-    public string $title = '';
+    public $title = '';
 
     public function renderView($view, array $params)
     {
@@ -22,7 +22,7 @@ class View
 
         ob_start();
 
-        include_once Application::$ROOT_DIR."/views/layouts/$layoutName.php";
+        include_once Application::$ROOT_DIR."/application/views/layouts/$layoutName.php";
 
         $layoutContent = ob_get_clean();
 
@@ -39,7 +39,7 @@ class View
 
         ob_start();
 
-        include_once Application::$ROOT_DIR."/views/$view.php";
+        include_once Application::$ROOT_DIR."/application/views/$view.php";
 
         return ob_get_clean();
 

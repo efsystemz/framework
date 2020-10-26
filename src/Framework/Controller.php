@@ -7,14 +7,14 @@ use Efsystems\Framework\Middlewares\BaseMiddleware;
 class Controller
 {
 
-    public string $layout = 'main';
+    public $layout = 'main';
 
-    public string $action = '';
+    public $action = '';
 
     /**
      * @var \Efsystems\Framework\Middlewares\BaseMiddleware[]
      */
-    protected array $middlewares = [];
+    protected $middlewares = [];
 
     public function setLayout($layout): void
     {

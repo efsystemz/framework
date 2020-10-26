@@ -9,7 +9,7 @@ use Efsystems\Framework\Exception\ForbiddenException;
 class AuthMiddleware extends BaseMiddleware
 {
 
-    protected array $actions = [];
+    protected $actions = [];
 
     public function __construct($actions = [])
     {

@@ -11,7 +11,7 @@ class Model
     const RULE_MATCH    = 'match';
     const RULE_UNIQUE   = 'unique';
 
-    public array $errors = [];
+    public $errors = [];
 
     public function loadData($data)
     {
