@@ -6,8 +6,8 @@ use Efsystems\Framework\Exception\NotFoundException;
 
 class Router
 {
-    private Request $request;
-    private Response $response;
+    private $request;
+    private $response;
 
     private $routeMap = [];
 
