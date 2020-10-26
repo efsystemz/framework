@@ -19,11 +19,10 @@
     },
     "autoload": {
         "files": [
-            "src/Core/Foundation/helpers.php",
-            "src/Core/Support/helpers.php"
+            "src/Framework/helpers.php"
         ],
         "psr-4": {
-            "Core\\": "src/Core/"
+            "Efsystems\\": "src/"
         }
     },
     "require-dev": {
