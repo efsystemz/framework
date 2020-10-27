@@ -4,6 +4,7 @@ namespace Efsystems\Framework;
 
 class Model
 {
+    
     const RULE_REQUIRED = 'required';
     const RULE_EMAIL    = 'email';
     const RULE_MIN      = 'min';
@@ -84,12 +85,17 @@ class Model
                 if ($ruleName === self::RULE_UNIQUE) {
 
                     $className = $rule['class'];
+
                     $uniqueAttr = $rule['attribute'] ?? $attribute;
+
                     $tableName = $className::tableName();
+
                     $db = Application::$app->db;
+
                     $statement = $db->prepare("SELECT * FROM $tableName WHERE $uniqueAttr = :$uniqueAttr");
                     $statement->bindValue(":$uniqueAttr", $value);
                     $statement->execute();
+
                     $record = $statement->fetchObject();
 
                     if ($record) {

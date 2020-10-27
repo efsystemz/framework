@@ -18,12 +18,15 @@ abstract class DbModel extends Model
     {
 
         $tableName = $this->tableName();
+        
         $attributes = $this->attributes();
 
-        $params = array_map(fn($attr) => ":$attr", $attributes);
+        $params = array_map( function($attr){
+            return ":$attr";
+        } , $attributes);
 
         $statement = self::prepare("INSERT INTO $tableName (" . implode(",", $attributes) . ") 
-                VALUES (" . implode(",", $params) . ")");
+            VALUES (" . implode(",", $params) . ")");
 
         foreach ($attributes as $attribute) {
             $statement->bindValue(":$attribute", $this->{$attribute});
@@ -42,11 +45,14 @@ abstract class DbModel extends Model
 
     public static function findOne($where)
     {
-        
+
         $tableName = static::tableName();
+
         $attributes = array_keys($where);
 
-        $sql = implode("AND", array_map(fn($attr) => "$attr = :$attr", $attributes));
+        $sql = implode("AND", array_map(function($attr){
+            return "$attr = :$attr";
+        }, $attributes));
 
         $statement = self::prepare("SELECT * FROM $tableName WHERE $sql");
 

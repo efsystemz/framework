@@ -23,7 +23,9 @@ class Database
 
     public function applyMigrations()
     {
+        
         $this->createMigrationsTable();
+
         $appliedMigrations = $this->getAppliedMigrations();
 
         $newMigrations = [];
@@ -90,7 +92,9 @@ class Database
     protected function saveMigrations(array $newMigrations)
     {
 
-        $str = implode(',', array_map(fn($m) => "('$m')", $newMigrations));
+        $str = implode(',', array_map(function($m){
+            return "('$m')";
+        }, $newMigrations));
 
         $statement = $this->pdo->prepare("INSERT INTO migrations (migration) VALUES 
             $str
