@@ -7,9 +7,9 @@ use Efsystems\Framework\Model;
 class Field extends BaseField
 {
 
-    const TYPE_TEXT = 'text';
+    const TYPE_TEXT     = 'text';
     const TYPE_PASSWORD = 'password';
-    const TYPE_FILE = 'file';
+    const TYPE_FILE     = 'file';
 
     /**
      * Field constructor.
@@ -32,7 +32,7 @@ class Field extends BaseField
             $this->type,
             $this->model->hasError($this->attribute) ? ' is-invalid' : '',
             $this->attribute,
-            $this->model->{$this->attribute},
+            $this->model->{$this->attribute}
         );
 
     }

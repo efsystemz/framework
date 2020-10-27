@@ -19,8 +19,10 @@ abstract class BaseField
      */
     public function __construct(Model $model, string $attribute)
     {
+        
         $this->model        = $model;
         $this->attribute    = $attribute;
+
     }
 
     public function __toString()
