@@ -21,7 +21,7 @@ abstract class DbModel extends Model
         
         $attributes = $this->attributes();
 
-        $params = array_map( function($attr){
+        $params = array_map(function($attr){
             return ":$attr";
         } , $attributes);
 

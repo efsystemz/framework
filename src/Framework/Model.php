@@ -133,7 +133,7 @@ class Model
     protected function addErrorByRule(string $attribute, string $rule, $params = [])
     {
 
-        $params['field'] ??= $attribute;
+        $params['field'] ?? $attribute;
 
         $errorMessage = $this->errorMessage($rule);
 
